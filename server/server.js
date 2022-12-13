@@ -16,12 +16,12 @@ app.get("/api/", (req, res) => {
 });
 
 app.get("*", (req, res) => {
-    res.sendFile(path.resolve("../client/dist", "index.html")):
-})
+  res.sendFile(path.resolve("../client/dist", "index.html"));
+});
 
 mongoose.connection.once("open", () => {
-    console.log("connect to mongodb")
-    app.listen(PORT, () => {
-      console.log(`Example app listening on port ${PORT}`);
-    });
-})
+  console.log("connect to mongodb");
+  app.listen(PORT, () => {
+    console.log(`Example app listening on port ${PORT}`);
+  });
+});
